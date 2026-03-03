@@ -4,8 +4,7 @@ using System.Collections.Generic;
 namespace MatrixCalculator { 
   
   class MatrixException : Exception {
-
-        public MatrixException(string message) : base(message) { } 
+     public MatrixException(string message) : base(message) { } 
   }
   
   class Matrix : ICloneable, IComparable<Matrix> {
