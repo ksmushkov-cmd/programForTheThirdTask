@@ -19,7 +19,7 @@ namespace MatrixCalculator {
       }
 
       Size = size;
-            _matrix = new double[size, size];
+      _matrix = new double[size, size];
 
     }
 
