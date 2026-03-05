@@ -20,7 +20,6 @@ namespace MatrixCalculator {
 
       Size = size;
       _matrix = new double[size, size];
-
     }
 
     public Matrix(int size, bool randomFill) : this(size) {
@@ -327,7 +326,7 @@ namespace MatrixCalculator {
           // Check if the current element is non-zero
           // (with a 0.0001 tolerance for fractional numbers)
           double epsilon = 0.0001;
-          if (Math.Abs(data[rowIndex, columnIndex]) > epsilon) {
+          if (Math.Abs(_matrix[rowIndex, columnIndex]) > epsilon) {
                         
             return false;
           }
@@ -444,7 +443,8 @@ namespace MatrixCalculator {
         double epsilon = 0.0001;
 
         if (Math.Abs(smallSquareMatrix.Determinant()) > epsilon) {
-
+          
+          Matrix inverseMatrix = smallSquareMatrix.Inverse();
           Console.WriteLine("Inverse matrix smallSquareMatrix:\n" + 
                             inverseMatrix + 
                             "\nExamination: smallSquareMatrix * inverseMatrix (must be single):\n" + 
